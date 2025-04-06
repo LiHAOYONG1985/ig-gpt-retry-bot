@@ -49,6 +49,18 @@ app.post('/webhook', async (req, res) => {
   }
 });
 
+app.post('/test-chat', async (req, res) => {
+  const userMessage = req.body.message;
+
+  try {
+    const gptReply = await callGPT(userMessage);
+    res.json({ reply: gptReply });
+  } catch (error) {
+    console.error('GPT error:', error.message);
+    res.status(500).json({ reply: '取得回覆失敗' });
+  }
+});
+
 async function callGPT(userInput) {
   const response = await axios.post(
     'https://api.openai.com/v1/chat/completions',
