@@ -22,5 +22,7 @@ const faqData = [
   {
     keywords: ['雷雕', '照片'],
     answer: '雷雕能做照片，但清晰度要夠唷～您可以先傳照片，我幫您看一下～'
-  },
+  }
 ];
+
+module.exports = faqData;
