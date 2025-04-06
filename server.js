@@ -169,3 +169,11 @@ app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 const path = require('path');
 app.use(express.static(path.join(__dirname, 'public')));
 
+const loadFAQFromSheet = require('./faq-sync');
+
+let faqData = [];
+
+(async () => {
+  faqData = await loadFAQFromSheet(); // 伺服器啟動時就載入 FAQ
+})();
+
