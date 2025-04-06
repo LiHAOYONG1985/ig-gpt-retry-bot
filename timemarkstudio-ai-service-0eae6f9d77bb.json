@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "timemarkstudio-ai-service",
+  "private_key_id": "0eae6f9d77bb72fc8768ac2d82e6eda87df24abf",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC1d76/xU/opyG1\nOGnsWzKRXnn0OG+xAiWj7CXgNtuQ/dHB2aPOD+x3vtyKg8c0jmMFm29bC3GOLJno\nnfS9Z8ESVnhmgWkUAssto08MuyCtBZYFhun1DHLl0fn+JjDVGl40oflv8KPSeUVf\nIgygMeiLmQAOcIITmNuFsU7zaQuZAr7PxHWHPwJVEXBwdDtVhwDMSvd4C3HBHwcE\nn+i1tQLrrkWU5A8xtut9WiPHOTwHEwWxVjNavjsWIUPWyUaIVOKsQZ3q9UXpYuTV\ncMNlpBFQ1BH3UdoQjcsZBfshqcVDjwtH0T1KE8OYts57o8u9ie73LwkilpTSprq/\n4hrAl/1hAgMBAAECggEAFYGATCw0nlRhpMnvl7DD1ew16hu0H5dVtvm6EA/q8Tcm\nIDdMTT6gM3LITUF1HsU5zATR63Qi5uAMn2pKLRY6Oz5J3OVnpWpNV6Eb3Fzi8E5n\nVfautw6yITVuJKYJsdUC/BwuumBGR0p9o7Aege+tk7m0AtdnkFipuiGQwz0cQEDv\n2TTwv4XBsXwToZnOjk3qmHCf6vdNV2H/7fSwWYNhBPKVr+EW8G0CTA6ckwDhjfw+\nN3i2Xd+S9n/cZPDS0EtRqFeizGCeYg51TeRpFKmf4VUsUQ+qR9cp136G1UF5+2Ob\nb6W0jzLk5kcwMsn3aDn160qt2aT2Brm69kHj8yD1BwKBgQDu0n9HsBxYBqOyO0CX\ncqFHqFSxLMtTI9djzoppqNwV99p9+5OEGebYu8i3Y7dkP14HWjv0xZqLMCCPv3UY\nPM90OOzuHamj+TjeT5VIjKEa5Oy3H0bT0nz8GQlQy2EadfEaTW9L7ktFGpp0JLFy\nRH7g5qP+aMD6Xe4MPeIZMG+3ZwKBgQDChSm8PLbrtA863sUYjtOb78L0OtnMrz4+\nlA0JjLuSs2yXhX2bRrTflR+k825xkWfN0KiGRlJIS490QiM3AlxTWf2pEnBMWDF5\nQ44tUPnkOR7d3w8NATM8SW18BJutIaARSwhdieFVDMXJuFADArloFTb+NlEKeNxK\nHCrb8BkP9wKBgQCpqjOwW0YXp0feVEf0EATSIp1gbaFZRGo9xrsAi20n0jiQLg1D\n2R7uNKJI3venqXkEoi9cGpJLdfp8BRmMCY+cUuDH3ZzqGCE1lrZIn1fJAn/FLNwl\nmjEe7C55DrPCl62c8Qwzlmw1AMxf3L2Pn2fAITq6f/MxK0/1tHUPTiDf2wKBgD1v\nx4W/e1qojSLf10pxWd5ndKCkscOXGca0BgYdH+UurD6TF9/iDiCLvengROKztSBp\nJcD7FuPkkZN7jBnEshpVUuuCeltyg3W0Y4RmjfaKH/idiehml6MT4fOIlQ6yjxbH\nJwY8FSJCnXmfsA2zX5HDGZJi32e6UoFJsjOy+odzAoGAWVw/eAlGMYPqpV1GGQHO\nCDUXJfxaNiKPQshr+nctzLbiANt5Eg+nmXD1eW1nn9tEY6ESXTPj2OzOZAyQbAyA\nzbH6VSF1pL4SiJL7onIbE4dRIa0SSDuPIStdWyQvVR4Ys/0xNBqCYTQwpV+zH+Go\nnvn6tXLfFxHebT2QBd1BoHw=\n-----END PRIVATE KEY-----\n",
+  "client_email": "faq-sheet-reader@timemarkstudio-ai-service.iam.gserviceaccount.com",
+  "client_id": "100015580372592095997",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/faq-sheet-reader%40timemarkstudio-ai-service.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
