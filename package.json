@@ -1,4 +1,5 @@
 {
+  npm install googleapis
   "name": "ig-gpt-reply-bot",
   "version": "1.0.0",
   "main": "server.js",
@@ -12,4 +13,4 @@
     "express": "^4.18.2"
   }
 }
-npm install googleapis
+
