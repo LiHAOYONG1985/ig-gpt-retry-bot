@@ -95,24 +95,22 @@ app.post('/webhook', async (req, res) => {
 
 app.post('/test-chat', async (req, res) => {
   const userMessage = req.body.message;
-// 嘗試命中 FAQ 快速回覆
-for (const faq of faqAnswers) {
-  if (faq.keywords.some(keyword => userMessage.includes(keyword))) {
-    console.log('🔁 命中 FAQ，直接回覆：', faq.answer);
-    return res.json({ reply: faq.answer });
+
+  // 判斷是否命中 FAQ
+  for (const faq of faqData) {
+    if (faq.keywords.some(keyword => userMessage.includes(keyword))) {
+      console.log('🔁 命中 FAQ from Sheet：', faq.answer);
+      return res.json({ reply: faq.answer });
+    }
   }
-}
 
-  const now = new Date().toISOString();
-  console.log(`📥 [${now}] 收到測試訊息：${userMessage}`);
-
+  // fallback → call GPT
   try {
     const gptReply = await callGPT(userMessage);
-    console.log(`🧠 [${now}] GPT 回覆成功：${gptReply}`);
-    res.json({ reply: gptReply });
-  } catch (error) {
-    console.error(`❌ [${now}] GPT 錯誤：${error.message}`);
-    res.status(500).json({ reply: '取得回覆失敗' });
+    return res.json({ reply: gptReply });
+  } catch (err) {
+    console.error('GPT Error:', err.message);
+    return res.status(500).json({ reply: '抱歉，目前系統忙碌中～請稍後再試試！' });
   }
 });
 
