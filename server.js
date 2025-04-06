@@ -52,14 +52,19 @@ app.post('/webhook', async (req, res) => {
 app.post('/test-chat', async (req, res) => {
   const userMessage = req.body.message;
 
+  const now = new Date().toISOString();
+  console.log(`📥 [${now}] 收到測試訊息：${userMessage}`);
+
   try {
     const gptReply = await callGPT(userMessage);
+    console.log(`🧠 [${now}] GPT 回覆成功：${gptReply}`);
     res.json({ reply: gptReply });
   } catch (error) {
-    console.error('GPT error:', error.message);
+    console.error(`❌ [${now}] GPT 錯誤：${error.message}`);
     res.status(500).json({ reply: '取得回覆失敗' });
   }
 });
+
 
 async function callGPT(userInput) {
   const response = await axios.post(
@@ -74,7 +79,10 @@ async function callGPT(userInput) {
         Authorization: `Bearer ${OPENAI_API_KEY}`,
       },
     }
-  );
+  )
+  console.log(`📤 正在送出給 GPT 的內容：${userInput}`);
+ 
+    ;
 
   return response.data.choices[0].message.content;
 }
