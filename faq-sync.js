@@ -8,7 +8,7 @@ const SHEET_RANGE = '工作表1!A2:B'; // 根據你的表單名稱修改，如 S
 async function loadFAQFromSheet() {
   try {
     const auth = new google.auth.GoogleAuth({
-      keyFile: './timemarkstudio-ai-service-0eae6f9d77bb.json',
+      credentials: JSON.parse(process.env.GOOGLE_SERVICE_JSON),
       scopes: ['https://www.googleapis.com/auth/spreadsheets.readonly'],
     });
 
