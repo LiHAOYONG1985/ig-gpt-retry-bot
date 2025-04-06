@@ -56,7 +56,7 @@ app.post('/test-chat', async (req, res) => {
   // 判斷是否命中 FAQ
   for (const faq of faqData) {
     if (faq.keywords.some(keyword => userMessage.includes(keyword))) {
-      console.log('🔁 命中 FAQ from Sheet：', faq.answer);
+      console.log('🔁 命中 FAQ：', faq.answer);
       return res.json({ reply: faq.answer });
     }
   }
@@ -70,6 +70,7 @@ app.post('/test-chat', async (req, res) => {
     return res.status(500).json({ reply: '抱歉，目前系統忙碌中～請稍後再試試！' });
   }
 });
+
 
 
 async function callGPT(userInput) {
