@@ -71,7 +71,20 @@ async function callGPT(userInput) {
     'https://api.openai.com/v1/chat/completions',
     {
       model: 'gpt-3.5-turbo',
-      messages: [{ role: 'user', content: userInput }],
+      messages: [
+  {
+    role: 'system',
+    content: `
+你是「心刻時光」品牌的客服助手，專門回覆客製化禮品、UV印刷與文創產品相關問題。
+請用親切、有禮但自然的語氣回應客戶，語句不要太官方。
+品牌精神是：客製化的溫度、用禮物傳遞情感。
+如果遇到無法解答的問題，可以這樣說：「我們會儘快協助您喔～」。
+回覆請控制在 100 字以內，並使用繁體中文。
+    `,
+  },
+  { role: 'user', content: userInput },
+],
+
     },
     {
       headers: {
