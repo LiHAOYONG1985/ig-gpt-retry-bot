@@ -95,6 +95,13 @@ app.post('/webhook', async (req, res) => {
 
 app.post('/test-chat', async (req, res) => {
   const userMessage = req.body.message;
+// 嘗試命中 FAQ 快速回覆
+for (const faq of faqAnswers) {
+  if (faq.keywords.some(keyword => userMessage.includes(keyword))) {
+    console.log('🔁 命中 FAQ，直接回覆：', faq.answer);
+    return res.json({ reply: faq.answer });
+  }
+}
 
   const now = new Date().toISOString();
   console.log(`📥 [${now}] 收到測試訊息：${userMessage}`);
